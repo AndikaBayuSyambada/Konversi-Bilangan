@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi Bilangan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Konversi Bilangan</h1>
+
+        <div class="form-group">
+            <label for="fromBase">Pilih sistem bilangan asal:</label>
+            <select id="fromBase" class="form-control">
+                <option value="2">Biner</option>
+                <option value="8">Oktal</option>
+                <option value="10" selected>Desimal</option>
+                <option value="16">Heksadesimal</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="number">Masukkan bilangan:</label>
+            <input type="text" id="number" class="form-control" placeholder="Contoh: 1010">
+        </div>
+
+        <div class="form-group">
+            <label for="toBase">Pilih sistem bilangan tujuan:</label>
+            <select id="toBase" class="form-control">
+                <option value="2" selected>Biner</option>
+                <option value="8">Oktal</option>
+                <option value="10">Desimal</option>
+                <option value="16">Heksadesimal</option>
+            </select>
+        </div>
+
+        <button onclick="convertNumber()">Konversi</button>
+        
+        <h2>Hasil: <span id="result">-</span></h2>
+        
+        <div id="explanationBox" class="explanation" style="display: none;">
+            <h3>Cara Penghitungan</h3>
+            <div id="explanationSteps" class="steps"></div>
+        </div>
+        
+        <button onclick="resetForm()">Ulangi</button>
+    </div>
+
+    <script src="script.js"> </script>
+</body>
+</html>
